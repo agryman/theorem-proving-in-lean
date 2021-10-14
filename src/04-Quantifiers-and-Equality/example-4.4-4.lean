@@ -193,7 +193,7 @@ or.elim (em r)
 -- In the above proof we first use em on r.
 -- The proof when r holds is trivial since anything implies r.
 -- We then deal with the case when ¬ r holds.
--- Then for examine each conjunct and apply em to it.
+-- Then we examine each conjunct and apply em to it.
 -- I need the following lemma, which I proved in an example above.
 
 lemma not_forall_exists_not : ¬ (∀ x: α, p x) → ∃ x, ¬(p x) :=

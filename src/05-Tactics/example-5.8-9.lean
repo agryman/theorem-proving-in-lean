@@ -12,5 +12,11 @@ import data.int.basic
 
 #check sub_self
 
+variable x : ℤ
+#check sub_self (x * 0)
+
 example (x : ℤ) : x * 0 = 0 :=
-sorry
+calc
+  x * 0 = x * (x - x)   : by rw (sub_self x)
+  ...   = x * x - x * x : mul_sub x x x
+  ...   = 0             : sub_self (x * x)
